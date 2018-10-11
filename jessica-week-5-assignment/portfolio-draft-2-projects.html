@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Jessica Work Page 2 Draft 2</title>
+    <link rel="stylesheet" href="css/reset.css" media="all">
+    <link rel="stylesheet" href="css/styles.css" media="all">
+</head>
+
+<body class="body-all-background">
+    <header>
+        <h1><a class="nav-links" href="index.html">Jessica<br>Huang</a></h1>
+        <nav>
+            <ul>
+                <li><a class="nav-links" href="portfolio-draft-2-collection.html">Collections</a></li>
+                <li><a class="nav-links" href="portfolio-draft-2-projects.html">Projects</a></li>
+                <li><a class="nav-links" href="portfolio-draft-2-about.html">About</a></li>
+                <li><a class="nav-links" href="portfolio-draft-2-social.html">Social</a></li>
+            </ul>
+        </nav>
+    </header>
+<!--
+    <article>
+        <h2>Heading Title</h2>
+        <section>
+            <h3>Subheading 1</h3>
+            <p></p>
+            <figure></figure>
+        </section>
+        <section>
+            <h3>Subheading 2</h3>
+            <p></p>
+            <figure></figure>
+        </section>
+        <section>
+            <h3>Subheading 3</h3>
+            <p></p>
+            <figure></figure>
+        </section>
+    </article>
+-->
+    
+    <!-- Container for the image gallery -->
+
+<h2 class="page-title">Slideshow Gallery</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 4</div>
+    <img src="img/projects/fall-2015/drawing-image-1.jpg" style="width:100%" alt="img1">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 4</div>
+    <img src="img/projects/fall-2015/drawing-image-2.jpg" style="width:100%" alt="img2">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 4</div>
+    <img src="img/projects/fall-2015/drawing-image-3.jpg" style="width:100%" alt="img3">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 4</div>
+    <img src="img/projects/fall-2015/drawing-image-4.jpg" style="width:100%" alt="img4">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="img/projects/fall-2015/drawing-image-1.jpg" style="width:100%" onclick="currentSlide(1)" alt="img1">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/projects/fall-2015/drawing-image-2.jpg" style="width:100%" onclick="currentSlide(2)" alt="img2">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/projects/fall-2015/drawing-image-3.jpg" style="width:100%" onclick="currentSlide(3)" alt="img3">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/projects/fall-2015/drawing-image-4.jpg" style="width:100%" onclick="currentSlide(4)" alt="img4">
+    </div>
+      
+  </div>
+
+    <p class="project-description">Project discription<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac lorem ligula. Proin porta accumsan augue, id tincidunt odio scelerisque in. Duis commodo tincidunt est sed malesuada. Nunc in feugiat augue. In molestie, neque non placerat dapibus, est leo pharetra diam, non aliquet tortor mauris id lorem. Donec semper elit vel tortor varius accumsan. Proin eget congue purus, vitae vulputate turpis. Nulla sit amet interdum augue. Etiam odio magna, mattis nec posuere nec, tempor sit amet est.</p>
+    
+</div>
+    
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    
+    
+    <footer><small>&copy; Jessica Huang 2018</small></footer>
+    
+</body>
+
+</html>
